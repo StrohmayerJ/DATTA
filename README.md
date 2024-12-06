@@ -4,7 +4,7 @@
 **Strohmayer, J., Sterzinger, R., Wödlinger, M., and Kampel, M.** (2024). DATTA: Domain-Adversarial Test-Time Adaptation for Cross-Domain WiFi-Based Human Activity Recognition. arXiv. doi: https://doi.org/10.48550/arXiv.2411.13284.
 
 BibTeX:
-```
+```BibTeX
 @misc{strohmayer2024datta,
       title={DATTA: Domain-Adversarial Test-Time Adaptation for Cross-Domain WiFi-Based Human Activity Recognition}, 
       author={Julian Strohmayer and Rafael Sterzinger and Matthias Wödlinger and Martin Kampel},
