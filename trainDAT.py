@@ -222,7 +222,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--data', default='data/widar3g6d/', help='data directory')
-    parser.add_argument('--name', default='wadt', help='run base name (_* will be appended for multiple runs)')
+    parser.add_argument('--name', default='wdat', help='run base name (_* will be appended for multiple runs)')
     parser.add_argument('--epochs', type=int, default=4000, help='number of training epochs')
     parser.add_argument('--num', type=int, default=1, help='number of training runs')
     parser.add_argument('--lr', type=float, default=0.00005, help='optimizer learning rate')
