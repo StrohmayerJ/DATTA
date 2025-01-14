@@ -15,7 +15,7 @@ Download and unzip them in this directory (the original .zip file can be deleted
 Then run the following command (~16GB RAM required):
 
 ```
-python3 createWidar3g6d.py --mode TRAIN; python3 utils/createWidar3g6d.py --mode TEST
+python3 utils/createWidar3g6d.py --mode TRAIN; python3 utils/createWidar3g6d.py --mode TEST
 ```
 
 The training and testing cache files (`widar3-g6_csi_domain_train_cache.pkl` and `widar3-g6_csi_domain_test_cache.pkl`) should now be present in this directory. 
