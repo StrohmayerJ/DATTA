@@ -81,7 +81,7 @@ class Widar3g6d(Dataset):
         c = self.c[index]-1 # activity class labels: [1,2,3,4,5,6] 
         e = self.e[index] # environment ids: [1,2,3]
         u = self.u[index] # user ids: [1,2,3,5,6,7,8,9,10,11,12,13,14,15,16,17] 
-        d = self.d[index]-9 # TRAIN domain labels: [9,10,11,12,13,14,15], 0-8 are TEST domain labels
+        d = self.d[index] if self.mode == 'TEST' else self.d[index]-9 # TRAIN domain labels: [9,10,11,12,13,14,15], 0-8 are TEST domain labels
         
         # extract feature window
         featureWindow = self.features[index]
