@@ -97,8 +97,8 @@ def test(opt):
 
                     # setup model and optimizer for training in online fashion
                     if opt.update_affine_only:
-                            model = freeze_except_bn(model, bn_condidiate_layers=candidate_layers)  # set only batchnorm layers to trainable
-                            params, _ = collect_bn_params(model,bn_candidate_layers=candidate_layers)  # collecting gamma and beta in batchnorm layers
+                            model = freeze_except_bn(model, bn_condidiate_layers=candidate_layers)  # set only LayerNorm layers to trainable
+                            params, _ = collect_bn_params(model,bn_candidate_layers=candidate_layers)  # collecting gamma and beta in LayerNorm layers
                             optimizer = torch.optim.Adam(params, lr=opt.lr)
                     else:
                             optimizer = torch.optim.SGD(params=model.parameters(), lr=opt.lr)
