@@ -103,7 +103,7 @@ def test(opt):
                     else:
                             optimizer = torch.optim.SGD(params=model.parameters(), lr=opt.lr)
 
-                    # setup loss, specifying which target statistic should be used for regularization, source or batch norm
+                    # setup loss, specifying which target statistic should be used for regularization, source or LayerNorm
                     if opt.stat_reg == 'source':
                                 stat_reg_hooks = []
                                 for layer_id, (chosen_layer_name, chosen_layer) in enumerate(chosen_layers):
@@ -196,7 +196,7 @@ if __name__ == "__main__":
     parser.add_argument('--stat_type', type=str, default='spatiotemp', help='type of aggregation, either spatiotemp or spatial')
     parser.add_argument('--update_affine_only', action='store_true', help='only update affine parameters')
     parser.add_argument('--chosen_blocks', type=str, nargs='+', default=['layers.0']) # can be either ['layers.0','layers.1','layers.2','layers.3'] 
-    parser.add_argument('--stat_reg', type=str, default='source', help='either source or batch norm statistics bns')
+    parser.add_argument('--stat_reg', type=str, default='source', help='either source or LayerNorm statistics')
     parser.add_argument('--reg_type', type=str, default='l2', help='either l1 or l2 or kld or jsd')
     parser.add_argument('--momentum_mvg', type=float, default=0.55)
     parser.add_argument('--moving_avg', type=bool, default=True)
